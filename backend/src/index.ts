@@ -10,8 +10,15 @@ app.use("/tasks", taskRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello, World!! This is my backend server.');
-})
-
-app.listen(8000, () => {
-    console.log('Server is running on http://localhost:8000');
 });
+
+// Export for Vercel serverless functions
+export default app;
+
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+    const PORT = process.env.PORT || 8000;
+    app.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
+    });
+}
