@@ -1,16 +1,13 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Offline-first Task Manager backend with Express, TypeScript, and PostgreSQL",
-  "main": "dist/index.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts",
-    "build": "tsc && npm prune --production",
-    "start": "node dist/index.js",
-    "vercel-build": "npm run build"
+    "dev": "npx nodemon"
   },
   "keywords": [],
-  "author": "Atharva Chavan",
+  "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
